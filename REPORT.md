@@ -1,55 +1,34 @@
 # My Docker Assignment Report
 
-Name: ____________________
+Name: _Salam Msallam__
 
-Repository URL: ____________________
+Repository URL: https://github.com/salam-msallam/docker-assignment-starter 
 
 Use short sentences. Add the answers requested in the assignment PDF.
 Keep passwords, tokens, and private keys out of this report.
 
 ## Mission 1 - First Container
 
-Commands used:
-
-____________________
-
 What happened:
-
-____________________
+I used the Nginx image to run a web server in a container named web-server. I accessed it using http://localhost:8080 on my Ubuntu VM. 
 
 What I learned:
+8080:80 maps port 8080 on the host to port 80 inside the container. 
 
-____________________
-
-Problem I faced:
-
-____________________
-
-How I fixed it:
-
-____________________
 
 ## Mission 2 - Build Your Own Image
 
-Commands used:
-
-____________________
-
 What happened:
-
-____________________
+I created a Dockerfile for the Node.js application using FROM, WORKDIR, COPY, RUN, EXPOSE, and CMD.
+The first build failed while downloading the node:22-alpine base image. After retrying the download, Docker successfully pulled the base image.
+I then continued with the application build and the message.txt experiment. 
 
 What I learned:
-
-____________________
+Rebuilding the image and recreating the container is needed to include the edited file when it was copied at build time. 
 
 Problem I faced:
-
-____________________
-
-How I fixed it:
-
-____________________
+ The download of node:22-alpine was extremely slow and failed with connection reset by peer. 
+I also ran docker build once without the final . build-context argument.
 
 ## Mission 3 - Broken Port
 
