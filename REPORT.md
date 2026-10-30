@@ -51,47 +51,25 @@ Then I created a new container with the correct port mapping (8080:3000). The we
 
 ## Mission 4 - Environment Variables
 
-Commands used:
-
-____________________
-
 What happened:
 
-____________________
+I ran the same Docker image with different environment variable values. 
+The application displayed different messages without rebuilding the image. 
 
 What I learned:
-
-____________________
-
-Problem I faced:
-
-____________________
-
-How I fixed it:
-
-____________________
+ I learned how to use environment variables to change application configuration at runtime
+ without modifying or rebuilding the Docker image.
 
 ## Mission 5 - Docker Hub
 
-Commands used:
-
-____________________
-
 What happened:
-
-____________________
+I created a private repository named devops-node-app on Docker Hub.
+I tagged my local image and attempted to push it to the repository. 
+Several image layers uploaded successfully. 
 
 What I learned:
-
-____________________
-
-Problem I faced:
-
-____________________
-
-How I fixed it:
-
-____________________
+I learned how to create a private Docker Hub repository, tag a Docker image
+and push it to a container registry so it can be used on another machine. 
 
 ## Mission 6 - Remote Deployment
 
