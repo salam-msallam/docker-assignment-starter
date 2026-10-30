@@ -32,25 +32,22 @@ I also ran docker build once without the final . build-context argument.
 
 ## Mission 3 - Broken Port
 
-Commands used:
-
-____________________
-
 What happened:
-
-____________________
+ The container was running, but the website was not accessible because of incorrect port mapping.
+After fixing the port mapping, the application worked successfully on localhost:8080.
 
 What I learned:
 
-____________________
+The host port must be connected to the correct application port inside the container. 	
 
 Problem I faced:
-
-____________________
+First, the script had Windows line endings (CRLF). 
+Then, port 8080 was already being used by the node-app container from Mission 2.
+The broken container also had incorrect port mapping. 
 
 How I fixed it:
-
-____________________
+I converted the script to Linux line endings, stopped node-app to free port 8080, and removed the broken container. 
+Then I created a new container with the correct port mapping (8080:3000). The website opened successfully. 
 
 ## Mission 4 - Environment Variables
 
