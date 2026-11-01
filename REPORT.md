@@ -75,46 +75,39 @@ and push it to a container registry so it can be used on another machine.
 
 Commands used:
 
-____________________
+ ssh -i PRIVATE_KEY_PATH salam@SERVER_IP
+
+sudo docker ps
+
+sudo docker version
+
+sudo ss -lntp
+
+df -h /var/lib/docker
+
+free -h
+
+sudo docker pull salammsallam/devops-node-app:v1
+
+sudo docker run -d --name devops-assignment-remote-salam --restart=no --memory=256m --cpus=0.5 --pids-limit=100 --security-opt=no-new-privileges -p 127.0.0.1:18081:3000 salammsallam/devops-node-app:v1
+
+sudo docker ps --filter "name=devops-assignment-remote-salam"
+
+curl http://127.0.0.1:18081 
 
 What happened:
-
-____________________
+I deployed my Docker image from Docker Hub to a real Linux server using SSH. 
 
 What I learned:
-
-____________________
-
-Problem I faced:
-
-____________________
-
-How I fixed it:
-
-____________________
+I learned how to deploy applications remotely using Docker Hub without rebuilding images. 
 
 ## Mission 7 - Volumes
 
-Commands used:
-
-____________________
-
 What happened:
-
-____________________
+Without reusing a volume, the database record disappeared. With a named volume, the data could be preserved after recreating the container. 
 
 What I learned:
-
-____________________
-
-Problem I faced:
-
-____________________
-
-How I fixed it:
-
-____________________
-
+Named volumes store data independently of containers and help prevent data loss. 
 ## Mission 8 - Docker Networking
 
 Commands used:
