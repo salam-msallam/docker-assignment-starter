@@ -110,25 +110,12 @@ What I learned:
 Named volumes store data independently of containers and help prevent data loss. 
 ## Mission 8 - Docker Networking
 
-Commands used:
-
-____________________
-
 What happened:
-
-____________________
+ The application started but failed to connect to PostgreSQL because `DB_HOST` was set to `localhost`.
+ I changed it to `postgres` in `compose.yaml`.
 
 What I learned:
-
-____________________
-
-Problem I faced:
-
-____________________
-
-How I fixed it:
-
-____________________
+Containers communicate using service names through Docker Compose networking, not `localhost`. 
 
 ## Mission 9 - Docker Compose
 
